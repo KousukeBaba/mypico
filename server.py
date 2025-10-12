@@ -1,7 +1,7 @@
 import socket
 import threading
 
-HOST = "192.168.40.77"  #IP
+HOST = ""  #IP
 PORTS = [4242, 4243]    # USER_TASK_MAX=2
 
 #受信データを標準出力して ひたすらエコーバック
