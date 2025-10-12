@@ -16,9 +16,9 @@
 // 設定
 #define STACK_SIZE_LWIP 16384
 #define STACK_SIZE_USER 2048
-#define WIFI_SSID      "JCOM_DJHP"
-#define WIFI_PASSWORD  "132557722933"
-#define TEST_TCP_SERVER_IP "192.168.40.77"
+#define WIFI_SSID      ""
+#define WIFI_PASSWORD  ""
+#define TEST_TCP_SERVER_IP ""
 #define TCP_PORT_BASE 4242 //ポートは接続数に応じて 4242,4243,4244,...
 #define BUF_SIZE 2048 //TCP受信バッファサイズ
 
