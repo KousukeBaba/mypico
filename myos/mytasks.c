@@ -1,5 +1,5 @@
 #include "mytasks.h"
-#define MAX_TASKS 2
+#define MAX_TASKS 3 //合計スレッド数
 
 static TCB_t tcb_array[MAX_TASKS];
 static StackType_t *stack_ptrs[MAX_TASKS];

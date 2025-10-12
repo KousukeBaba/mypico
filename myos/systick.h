@@ -9,7 +9,7 @@
 #define SYST_CALIB (*(volatile uint32_t *)0xE000E01C) // Calibration Value
 
 #define SYSTICK_ENABLE     (1UL << 0UL)
-#define SYSTICK_TICKINT    (1UL << 1UL)
+#define SYSTICK_TICKINT    (1UL << 1UL) //systick有効化
 #define SYSTICK_CLKSOURCE  (1UL << 2UL)
 
 #define CPU_CLOCK_HZ       125000000UL
@@ -17,5 +17,6 @@
 
 void systick_init(void);
 void isr_systick(void);
+void systick_delay_ms(uint32_t ms);
 
 #endif // SYSTICK_H

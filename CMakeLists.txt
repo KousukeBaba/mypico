@@ -11,12 +11,21 @@ add_executable(mypico
     myos/myport.c
     myos/mytasks.c
     myos/systick.c
+    myos/net_queue.c
+    myos/safe_printf.c
 )
 
 target_include_directories(mypico PRIVATE
     myos
+    ${CMAKE_CURRENT_LIST_DIR}
 )
 
-target_link_libraries(mypico pico_stdlib)
+target_link_libraries(mypico
+    pico_stdlib
+    pico_cyw43_arch_lwip_poll
+)
+
+pico_enable_stdio_usb(mypico 0)
+pico_enable_stdio_uart(mypico 1)
 
 pico_add_extra_outputs(mypico)

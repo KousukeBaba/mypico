@@ -85,7 +85,7 @@ void dispatch( void )
 		"	mov r9, r5\n"
 		"	mov r10, r6\n"
 		"	mov r11, r7\n"
-		
+
 		"	msr psp, r0\n"
 		"	subs r0, r0, #32\n"
 		"	ldmia r0!, {r4-r7}\n"
