@@ -2,7 +2,7 @@
 Pico SDK のパスを環境変数 `PICO_SDK_PATH` に設定  
 
 main.c l19       `WIFI_SSID`  `WIFI_PASSWORD` `TEST_TCP_SERVER_IP` をそれぞれ設定  
-server.py        `HOST`：ホストのIPアドレス  
+server.py        `HOST`：ホストのIPアドレスを設定  
   
 ```  
 mkdir build  
