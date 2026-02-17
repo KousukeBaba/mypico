@@ -42,7 +42,7 @@ static volatile int rx_count[USER_TASK_MAX] = {0};        // 要素数
 bool net_rx_push(int id, const char *msg) {
     if (id < 0 || id >= USER_TASK_MAX) return false; 
     __asm volatile("cpsid i");
-    if (rx_count[id] >= NET_Q_SIZE) {　//キューが満杯→新データ破棄
+    if (rx_count[id] >= NET_Q_SIZE) { //キューが満杯→新データ破棄
         __asm volatile("cpsie i");
         return false;
     }

@@ -221,7 +221,7 @@ void task_user(void *arg) {
     char buf[64], recv_buf[64];
 
 
-    while (1) {
+    for (int i = 0; i < 10; i++) {
         // 送信処理
 		memset(buf, 0, sizeof(buf));
         snprintf(buf, sizeof(buf), "Message #%d from user%d\n", count++, my_id);
@@ -235,12 +235,22 @@ void task_user(void *arg) {
 
         systick_delay_ms(500);
     }
+
+    while (true) tight_loop_contents();
 }
 
 
 
 int main(void) {
     stdio_init_all();
+
+    //30s待機
+    safe_printf("Wait 30s...\n");
+    sleep_ms(10000);  
+    safe_printf("Wait 20s...\n");
+    sleep_ms(10000);  
+    safe_printf("Wait 10s...\n");
+    sleep_ms(10000);
 
     if (cyw43_arch_init()) { safe_printf("Wi-Fi init failed\n"); while (1); }
     cyw43_arch_enable_sta_mode();
